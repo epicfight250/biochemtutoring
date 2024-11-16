@@ -310,7 +310,7 @@ nav {
 /* Footer */
 footer {
     background-color: rgba(216, 213, 234, 0.95);
-    color: #333;
+    color: #2c1358;
     padding: 2rem 1rem;
     margin-top: 2rem;
 }
@@ -325,18 +325,23 @@ footer {
 }
 
 .footer-section h4 {
-    color: #333;
+    color: #2c1358;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .footer-section p {
     margin-bottom: 0.5rem;
+    color: #2c1358;
+    font-weight: 500;
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(137, 104, 205, 0.2);
+    border-top: 1px solid rgba(44, 19, 88, 0.2);
+    color: #2c1358;
 }
 
 .visitor-counter {
