@@ -58,7 +58,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(41, 128, 185, 0.9), rgba(52, 73, 94, 0.95)),
+    background: linear-gradient(rgba(65, 105, 225, 0.9), rgba(147, 112, 219, 0.95)),
                 url('https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
@@ -74,6 +74,18 @@ nav {
 .hero-content {
     color: #fff;
     max-width: 800px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero h1 {
@@ -90,7 +102,7 @@ nav {
 
 /* Buttons */
 .cta-button, .submit-button {
-    background-color: #3498db;
+    background-color: #9370DB;
     color: #fff;
     padding: 1rem 2rem;
     border: none;
@@ -103,7 +115,7 @@ nav {
 }
 
 .cta-button:hover, .submit-button:hover {
-    background-color: #2980b9;
+    background-color: #8A2BE2;
     color: #fff;
     text-decoration: none;
 }
