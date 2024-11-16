@@ -58,7 +58,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(65, 105, 225, 0.9), rgba(147, 112, 219, 0.95)),
+    background: linear-gradient(rgba(25, 25, 112, 0.95), rgba(72, 61, 139, 0.98)),
                 url('https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
@@ -102,7 +102,7 @@ nav {
 
 /* Buttons */
 .cta-button, .submit-button {
-    background-color: #9370DB;
+    background-color: #483D8B;
     color: #fff;
     padding: 1rem 2rem;
     border: none;
@@ -115,7 +115,7 @@ nav {
 }
 
 .cta-button:hover, .submit-button:hover {
-    background-color: #8A2BE2;
+    background-color: #191970;
     color: #fff;
     text-decoration: none;
 }
