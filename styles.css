@@ -59,7 +59,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(137, 104, 205, 0.75), rgba(216, 213, 234, 0.85)),
+    background: linear-gradient(rgba(44, 19, 88, 0.85), rgba(72, 61, 139, 0.9)),
                 url('https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
@@ -68,30 +68,18 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 1rem;
-    margin-top: 60px;
+    padding: 2rem;
 }
 
 .hero-content {
     color: #fff;
     max-width: 800px;
     animation: fadeIn 1.5s ease-out;
-    background: rgba(137, 104, 205, 0.4);
+    background: rgba(44, 19, 88, 0.6);
     padding: 2rem;
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .hero h1 {
@@ -104,7 +92,17 @@ nav {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Buttons */
