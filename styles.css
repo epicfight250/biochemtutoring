@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(180deg, #3b3f54 0%, #2c2f45 100%);
+    background: linear-gradient(180deg, #6b71a0 0%, #565b8a 100%);
 }
 
 /* Navigation */
@@ -139,7 +139,7 @@ nav {
 /* Services Section */
 .services {
     padding: 5rem 1rem;
-    background-color: rgba(64, 69, 105, 0.85);
+    background-color: rgba(107, 113, 160, 0.85);
     position: relative;
 }
 
@@ -232,7 +232,7 @@ nav {
 /* Contact Section */
 .contact {
     padding: 5rem 1rem;
-    background-color: rgba(64, 69, 105, 0.85);
+    background-color: rgba(107, 113, 160, 0.85);
     position: relative;
 }
 
@@ -311,7 +311,7 @@ nav {
 
 /* Footer */
 footer {
-    background-color: rgba(44, 47, 69, 0.95);
+    background-color: rgba(86, 91, 138, 0.95);
     color: #fff;
     padding: 2rem 1rem;
     margin-top: 2rem;
