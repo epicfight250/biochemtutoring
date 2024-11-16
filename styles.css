@@ -126,17 +126,19 @@ nav {
     text-decoration: none;
 }
 
-/* Services Section */
-.services {
-    padding: 5rem 1rem;
-    background-color: #f9f9f9;
-}
-
-.services h2, .about h2, .contact h2 {
+/* Section Headers */
+.services h2, .about-section h2, .contact h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 1rem;
+    background-color: #f9f9f9;
 }
 
 .service-grid {
@@ -178,11 +180,6 @@ nav {
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
-}
-
-.about-section h2 {
-    margin-bottom: 2rem;
-    color: #2c3e50;
 }
 
 .about-section p {
