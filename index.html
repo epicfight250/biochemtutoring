@@ -72,7 +72,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer style="text-align: center; padding: 20px; color: #fff; font-size: 0.9em;">
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Contact Info</h4>
@@ -91,6 +91,21 @@
         <div class="footer-bottom">
             <p>&copy; 2024 ChemistryTutor. All rights reserved.</p>
         </div>
+        <div class="visitor-counter">
+            <p>Visitors: <span id="visits">0</span></p>
+        </div>
+        <script>
+            fetch('https://api.countapi.xyz/create?namespace=biochemtutoring&key=visits&value=0')
+                .then(response => response.json())
+                .catch(error => console.error('Error:', error));
+
+            fetch('https://api.countapi.xyz/hit/biochemtutoring/visits')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('visits').innerText = data.value.toLocaleString();
+                })
+                .catch(error => console.error('Error:', error));
+        </script>
     </footer>
 
     <script src="script.js"></script>
