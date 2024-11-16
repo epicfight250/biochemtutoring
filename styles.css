@@ -58,7 +58,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(25, 25, 112, 0.95), rgba(72, 61, 139, 0.98)),
+    background: linear-gradient(rgba(25, 25, 112, 0.75), rgba(72, 61, 139, 0.85)),
                 url('https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
@@ -75,6 +75,11 @@ nav {
     color: #fff;
     max-width: 800px;
     animation: fadeIn 1.5s ease-out;
+    background: rgba(25, 25, 112, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes fadeIn {
@@ -91,13 +96,14 @@ nav {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
 }
 
 /* Buttons */
