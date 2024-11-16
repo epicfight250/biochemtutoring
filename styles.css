@@ -12,14 +12,30 @@ body {
     background: linear-gradient(180deg, #e6e4f0 0%, #d8d5ea 100%);
 }
 
-/* Navigation */
+/* Header */
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    background-color: rgba(216, 213, 234, 0.85);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(216, 213, 234, 0.95);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav {
