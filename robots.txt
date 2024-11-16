@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://epicfight250.github.io/biochemtutoring/sitemap.xml
