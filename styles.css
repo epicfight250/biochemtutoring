@@ -217,6 +217,22 @@ nav {
     resize: vertical;
 }
 
+/* Google Form Container */
+.google-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.google-form-container iframe {
+    width: 100%;
+    min-height: 600px;
+    border: none;
+    margin: 2rem 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
 /* Thank You Page */
 .thank-you-page {
     height: 100vh;
@@ -291,5 +307,9 @@ footer {
     
     .about-content {
         flex-direction: column;
+    }
+    
+    .google-form-container iframe {
+        min-height: 800px;
     }
 }
