@@ -413,9 +413,7 @@ footer {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    text-align: center;
     padding: 0 1rem;
 }
 
@@ -440,23 +438,8 @@ footer {
 }
 
 .visitor-counter {
-    margin-top: 1.5rem;
-    padding: 0.5rem;
-    background-color: rgba(137, 104, 205, 0.15);
-    border-radius: 8px;
-    display: inline-block;
-}
-
-.visitor-counter p {
-    margin: 0;
     font-size: 0.9em;
-    color: #333;
-}
-
-#visits {
-    font-weight: bold;
-    color: #333;
-    margin-left: 0.5rem;
+    color: #2c1358;
 }
 
 /* Responsive Design */
