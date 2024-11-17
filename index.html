@@ -3,21 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert Chemistry and Biology tutoring services in Dallas. Ph.D. biochemist with 20+ years of experience offering personalized learning plans, flexible scheduling, and both online and in-person sessions.">
-    <meta name="keywords" content="chemistry tutor, biology tutor, biochemistry tutor, Dallas tutor, science tutor, AP Chemistry, AP Biology, online tutoring, in-person tutoring">
-    <meta name="author" content="Dr. [Your Name]">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Chemistry and Biology Tutoring | Expert Ph.D. Tutor">
-    <meta property="og:description" content="Expert Chemistry and Biology tutoring services in Dallas. Ph.D. biochemist with 20+ years of experience offering personalized learning plans and flexible scheduling.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://epicfight250.github.io/biochemtutoring/">
-    
-    <title>Chemistry and Biology Tutoring | Expert Ph.D. Tutor in Dallas</title>
+    <title>Chemistry Tutoring - Expert Help for Students</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -28,7 +17,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Chemistry and Biology Tutor</div>
+            <div class="logo">ChemistryTutor</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -40,8 +29,8 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Mastering Chemistry with Expert Tutoring</h1>
-            <p>From basic concepts to advanced topics, I'm here to help you succeed</p>
+            <h1>Master Chemistry with Expert Tutoring</h1>
+            <p>From basic concepts to advanced topics, we're here to help you succeed</p>
             <a href="#contact" class="cta-button">Book a Session</a>
         </div>
     </section>
@@ -51,60 +40,60 @@
         <div class="service-grid">
             <div class="service-card">
                 <i class="fas fa-atom"></i>
-                <h3>General Tutoring</h3>
-                <p>Master fundamental concepts in biology and chemistry</p>
+                <h3>General Chemistry</h3>
+                <p>Master fundamental concepts, stoichiometry, and chemical equations</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-graduation-cap"></i>
                 <h3>Exam Prep</h3>
-                <p>AP Chemistry, AP Biology, SAT Subject Test, General Chemistry exams</p>
+                <p>AP Chemistry, SAT Subject Test, and college-level exams</p>
             </div>
         </div>
     </section>
 
     <section id="about" class="about-section">
         <h2>About Me</h2>
-        <p>I have a Ph.D in biochemistry and have been a science educator in biology and chemistry with 20+ years of experience in helping students achieve their academic goals. My tutoring approach combines clear explanations, practical examples, and interactive learning to ensure you truly understand the material.</p>
-        <ul class="about-benefits-list">
-            <li><i class="fas fa-check"></i> Personalized learning plans</li>
-            <li><i class="fas fa-check"></i> Flexible scheduling</li>
-            <li><i class="fas fa-check"></i> Online and in-person sessions</li>
-        </ul>
+        <p>I have a Ph.D in biochemisty and have been a science educator in biology and chemistry with 20+ years of experience in helping students achieve their academic goals. My tutoring approach combines clear explanations, practical examples, and interactive learning to ensure you truly understand the material.</p>
+        <div class="about-content">
+            <div class="about-text">
+                <ul class="benefits">
+                    <li>Personalized learning plans</li>
+                    <li>Flexible scheduling</li>
+                    <li>Online and in-person sessions</li>
+                    
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
+        <h2>Contact Us</h2>
         <div class="google-form-container">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMr2iMRfpvCEeU-Ug6EOmEPM2zMi6K5PDCE1y9tyo72T1lgQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 20px; color: #fff; font-size: 0.9em;">
+    <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Contact</h4>
+                <h4>Contact Info</h4>
                 <p>Email: cosmologymystery@gmail.com</p>
+                <p>Phone: (469) 450-5106</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="visitor-counter">
-                Visitors: <span id="visits">0</span>
-            </div>
+            <p>&copy; 2024 ChemistryTutor. All rights reserved.</p>
         </div>
-        <script>
-            fetch('https://api.countapi.xyz/create?namespace=biochemtutoring&key=visits&value=0')
-                .then(response => response.json())
-                .catch(error => console.error('Error:', error));
-
-            fetch('https://api.countapi.xyz/hit/biochemtutoring/visits')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('visits').innerText = data.value.toLocaleString();
-                })
-                .catch(error => console.error('Error:', error));
-        </script>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
