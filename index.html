@@ -121,7 +121,6 @@
         <div class="hero-content">
             <h1>Master Chemistry with Expert Tutoring</h1>
             <p>From basic concepts to advanced topics, we're here to help you succeed</p>
-            <button onclick="openModal()" class="cta-button">Book a Session</button>
         </div>
     </section>
 
@@ -181,103 +180,8 @@
         </div>
     </footer>
 
-    <!-- Booking Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Book a Tutoring Session</h2>
-            <form id="bookingForm" onsubmit="submitForm(event)">
-                <div class="form-group">
-                    <label for="name">Full Name*</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject*</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">Select a subject</option>
-                        <option value="General Chemistry">General Chemistry</option>
-                        <option value="AP Chemistry">AP Chemistry</option>
-                        <option value="AP Biology">AP Biology</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message or Preferred Schedule*</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Booking Request</button>
-            </form>
-        </div>
-    </div>
+
 
     <script src="script.js"></script>
-    <script>
-        // Modal functionality
-        const modal = document.getElementById('bookingModal');
-        
-        function openModal() {
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-        }
-        
-        function closeModal() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        }
-        
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-        
-        // Form submission
-        function submitForm(event) {
-            event.preventDefault();
-            
-            // Show loading state
-            const submitBtn = document.querySelector('#bookingForm .submit-btn');
-            const originalBtnText = submitBtn.textContent;
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            
-            // Get form data
-            const formData = {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value || 'Not provided',
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value,
-                date: new Date().toLocaleString()
-            };
-            
-            // Send email using EmailJS
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
-                .then(function(response) {
-                    console.log('Email sent successfully!', response.status, response.text);
-                    // Show success message
-                    alert('Thank you for your booking request! We will contact you shortly to confirm your session.');
-                    // Reset form and close modal
-                    document.getElementById('bookingForm').reset();
-                    closeModal();
-                }, function(error) {
-                    console.error('Failed to send email:', error);
-                    alert('There was an error sending your message. Please try again or contact us directly at cosmologymystery@gmail.com');
-                })
-                .finally(() => {
-                    // Reset button state
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalBtnText;
-                });
-        }
-    </script>
 </body>
 </html>
