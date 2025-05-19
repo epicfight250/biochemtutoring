@@ -17,11 +17,90 @@
     <title>Chemistry and Biology Tutoring | Expert Ph.D. Tutor in Dallas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #666;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
+        // Initialize EmailJS with your public key
         (function() {
-            emailjs.init("YOUR_PUBLIC_KEY");
+            // Replace with your EmailJS user ID
+            emailjs.init('YOUR_USER_ID');
         })();
     </script>
 </head>
@@ -42,7 +121,7 @@
         <div class="hero-content">
             <h1>Master Chemistry with Expert Tutoring</h1>
             <p>From basic concepts to advanced topics, we're here to help you succeed</p>
-            <a href="#contact" class="cta-button">Book a Session</a>
+            <button onclick="openModal()" class="cta-button">Book a Session</button>
         </div>
     </section>
 
@@ -78,9 +157,7 @@
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <div class="google-form-container">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMr2iMRfpvCEeU-Ug6EOmEPM2zMi6K5PDCE1y9tyo72T1lgQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
+        <p>Please reach out via email or phone for any inquiries or to schedule a session.</p>
     </section>
 
     <footer>
@@ -104,6 +181,103 @@
         </div>
     </footer>
 
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Book a Tutoring Session</h2>
+            <form id="bookingForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name">Full Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject*</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="General Chemistry">General Chemistry</option>
+                        <option value="AP Chemistry">AP Chemistry</option>
+                        <option value="AP Biology">AP Biology</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message or Preferred Schedule*</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Booking Request</button>
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('bookingModal');
+        
+        function openModal() {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+        
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Form submission
+        function submitForm(event) {
+            event.preventDefault();
+            
+            // Show loading state
+            const submitBtn = document.querySelector('#bookingForm .submit-btn');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Get form data
+            const formData = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value || 'Not provided',
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                date: new Date().toLocaleString()
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+                .then(function(response) {
+                    console.log('Email sent successfully!', response.status, response.text);
+                    // Show success message
+                    alert('Thank you for your booking request! We will contact you shortly to confirm your session.');
+                    // Reset form and close modal
+                    document.getElementById('bookingForm').reset();
+                    closeModal();
+                }, function(error) {
+                    console.error('Failed to send email:', error);
+                    alert('There was an error sending your message. Please try again or contact us directly at cosmologymystery@gmail.com');
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                });
+        }
+    </script>
 </body>
 </html>
