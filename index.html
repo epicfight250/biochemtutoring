@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Expert Chemistry and Biology tutoring services in Dallas. Ph.D. biochemist with 20+ years of experience offering personalized learning plans, flexible scheduling, and both online and in-person sessions.">
-    <meta name="keywords" content="chemistry tutor, biology tutor, biochemistry tutor, Dallas tutor, science tutor, AP Chemistry, AP Biology, online tutoring, in-person tutoring">
+    <meta name="keywords" content="chemistry tutor, biology tutor, biochemistry tutor, Dallas tutor, science tutor, AP Chemistry, AP Biology, online tutoring, in-person tutoring, high school science, college science, test prep">
     <meta name="author" content="Dr. [Your Name]">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://epicfight250.github.io/biochemtutoring/" />
     
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Chemistry and Biology Tutoring | Expert Ph.D. Tutor">
-    <meta property="og:description" content="Expert Chemistry and Biology tutoring services in Dallas. Ph.D. biochemist with 20+ years of experience offering personalized learning plans and flexible scheduling.">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://epicfight250.github.io/biochemtutoring/">
+    <meta property="og:title" content="Expert Chemistry & Biology Tutoring in Dallas | Ph.D. Tutor">
+    <meta property="og:description" content="20+ years experience helping students excel in Chemistry and Biology. Personalized tutoring for AP, college, and high school students in Dallas and online.">
+    <meta property="og:image" content="https://epicfight250.github.io/biochemtutoring/images/chemistry-tutoring-social.jpg">
     
-    <title>Chemistry and Biology Tutoring | Expert Ph.D. Tutor in Dallas</title>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://epicfight250.github.io/biochemtutoring/">
+    <meta property="twitter:title" content="Expert Chemistry & Biology Tutoring in Dallas | Ph.D. Tutor">
+    <meta property="twitter:description" content="20+ years experience helping students excel in Chemistry and Biology. Personalized tutoring for AP, college, and high school students in Dallas and online.">
+    <meta property="twitter:image" content="https://epicfight250.github.io/biochemtutoring/images/chemistry-tutoring-social.jpg">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <title>Expert Chemistry & Biology Tutor in Dallas | Ph.D. Tutor | [Your Name]</title>
+    <meta name="geo.region" content="US-TX" />
+    <meta name="geo.placename" content="Dallas" />
+    <meta name="geo.position" content="32.7767;-96.7970" />
+    <meta name="ICBM" content="32.7767, -96.7970" />
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <style>
         /* Modal Styles */
         .modal {
@@ -105,27 +126,36 @@
     </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">ChemistryTutor</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header role="banner">
+        <nav aria-label="Main navigation">
+            <div class="logo" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <span itemprop="name">ChemistryTutor</span>
+                <meta itemprop="description" content="Expert Chemistry and Biology tutoring services in Dallas">
+            </div>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#home" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <section id="home" class="hero" role="main">
         <div class="hero-content">
-            <h1>Master Chemistry with Expert Tutoring</h1>
-            <p>From basic concepts to advanced topics, we're here to help you succeed</p>
+            <h1>Master Chemistry with Expert Tutoring in Dallas</h1>
+            <p>From basic concepts to advanced topics, our Ph.D. tutor helps students excel in Chemistry and Biology. Serving Dallas students with 20+ years of teaching experience.</p>
+            <a href="#contact" class="cta-button" aria-label="Contact us for tutoring services">Get Started Today</a>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2>My Services</h2>
+    <section id="services" class="services" itemscope itemtype="https://schema.org/Service">
+        <h2>Expert Tutoring Services</h2>
+        <meta itemprop="serviceType" content="Chemistry and Biology Tutoring">
+        <meta itemprop="provider" content="ChemistryTutor">
+        <div itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+            <meta itemprop="name" content="Dallas">
+        </div>
         <div class="service-grid">
             <div class="service-card">
                 <i class="fa-solid fa-atom"></i>
@@ -140,9 +170,13 @@
         </div>
     </section>
 
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>I have a Ph.D in biochemisty and have been a science educator in biology and chemistry with 20+ years of experience in helping students achieve their academic goals. My tutoring approach combines clear explanations, practical examples, and interactive learning to ensure you truly understand the material.</p>
+    <section id="about" class="about-section" itemscope itemtype="https://schema.org/Person">
+        <h2>About <span itemprop="name">Dr. [Your Name]</span></h2>
+        <p><span itemprop="description">I have a Ph.D. in Biochemistry</span> and have been a science educator in biology and chemistry with <span itemprop="knowsAbout" itemscope itemtype="https://schema.org/Thing">
+            <span itemprop="name">20+ years of experience</span></span> helping students achieve their academic goals. My tutoring approach combines clear explanations, practical examples, and interactive learning to ensure you truly understand the material.</p>
+        <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+            <meta itemprop="name" content="[Your University]">
+        </div>
         <div class="about-content">
             <div class="about-text">
                 <ul class="about-benefits-list">

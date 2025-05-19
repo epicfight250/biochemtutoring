@@ -1,0 +1,12 @@
+/* TEAM */
+Site: Chemistry and Biology Tutoring
+Location: Dallas, TX, USA
+Contact: cosmologymystery@gmail.com
+
+/* SITE */
+Last update: 2025/05/18
+Language: English
+Doctype: HTML5
+
+/* THANKS */
+Thanks for visiting our website!
